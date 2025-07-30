@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todo list</title>
+    <link href="{% static 'todo/home.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="main-title">Todo List</h1>
+
+    <div class="container">
+
+        <div class="form-section">
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="title">Title</label><br>
+                    <!-- type is text , id title which helps for frontend designing , name is used for backed -->
+                    <input type="text" id="title" name="title" required><br><br>
+                </div>
+
+                <div>
+                    <label for="content">Content</label><br>
+                    <!-- rows= height , cols = width , better to do with css-->
+                    <textarea id="content" name="content" required></textarea><br>
+                </div>
+
+                <button class="save-btn" type="submit">Save</button>
+            </form>
+
+        </div>
+        ><div class="list-section"><br>
+            <center><h2>Your To-Do List</h2></center>
+                {% for task in tasks %}
+                <br><li><strong>{{ task.title}}</strong></li>
+                {{ task.content }}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

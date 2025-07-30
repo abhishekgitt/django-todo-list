@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: bisque;
+}
+
+.main-title {
+  color: darkolivegreen;
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  font-size: 36px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 80px;
+  gap: 50px;
+}
+
+/* Left and right sections take equal space */
+.form-section, .list-section {
+  flex: 1;
+}
+/* Center content inside list-section */
+.list-section{
+  display: flex;
+  flex-direction: column;
+  padding:30px;
+  border: 3px solid darkgoldenrod;
+}
+
+
+label {
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+}
+
+#title,
+#content {
+  width: 95%;
+  height: 50px;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 15px 0 30px 5%;
+}
+
+#content {
+  height: 120px;
+  resize: vertical;
+}
+
+button {
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 5%;
+}
