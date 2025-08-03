@@ -1,75 +1,123 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* === GLOBAL STYLES === */
 body {
-  background-color: bisque;
+    /* Set the default font and background for the entire page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f4f0;
+    margin: 0;
+    padding: 0;
 }
 
+/* === MAIN TITLE HEADER === */
 .main-title {
-  color: darkolivegreen;
-  background-color: cornflowerblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  font-size: 36px;
+    /* Style the top heading */
+    background-color: #4e7cff; /* Blue background */
+    color: white;              /* White text */
+    padding: 20px;             /* Space inside the box */
+    text-align: center;        /* Center the title text */
+    font-size: 32px;           /* Large font size */
 }
 
+/* === MAIN CONTAINER FOR FORM AND LIST === */
 .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 80px;
-  gap: 50px;
+    display: flex;               /* Place form and list side-by-side */
+    justify-content: space-around; /* Space out the items evenly */
+    padding: 30px;              /* Padding inside the container */
+    flex-wrap: wrap;            /* Wrap on small screens */
 }
 
-/* Left and right sections take equal space */
+/* === INDIVIDUAL SECTIONS === */
 .form-section, .list-section {
-  flex: 1;
-}
-/* Center content inside list-section */
-.list-section{
-  display: flex;
-  flex-direction: column;
-  padding:30px;
-  border: 3px solid darkgoldenrod;
+    width: 45%;                 /* Each takes almost half the width */
+    background-color: #ffffff; /* White background */
+    padding: 20px;              /* Inner space */
+    border-radius: 12px;        /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Light shadow for elevation */
 }
 
+/* === FORM INPUT FIELDS === */
+.form-group {
+    margin-bottom: 15px;        /* Space below each form field */
+}
 
+/* === LABELS === */
 label {
-  font-weight: bold;
-  display: block;
-  font-size: 20px;
-  margin-bottom: 10px;
-  margin-left: 5%;
+    font-weight: bold;          /* Bold text for labels */
+    display: block;             /* Take full width */
+    margin-bottom: 5px;         /* Space between label and input */
 }
 
-#title,
-#content {
-  width: 95%;
-  height: 50px;
-  border: 2px solid red;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
-  margin: 15px 0 30px 5%;
+/* === INPUT AND TEXTAREA === */
+input[type="text"],
+textarea {
+    width: 100%;                /* Take full width of container */
+    padding: 10px;              /* Space inside input */
+    border-radius: 8px;         /* Rounded corners */
+    border: 1px solid #ccc;     /* Light gray border */
+    font-size: 16px;            /* Comfortable text size */
 }
 
-#content {
-  height: 120px;
-  resize: vertical;
+/* === TEXTAREA SPECIFIC === */
+textarea {
+    resize: vertical;           /* Only allow vertical resizing */
+    height: 100px;              /* Default height */
 }
 
-button {
-  background-color: cornflowerblue;
-  color: white;
-  font-size: 18px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-left: 5%;
+/* === BUTTON GROUP (Save & Delete buttons side-by-side) === */
+.button-group {
+    margin-top: 10px;           /* Space above buttons */
+    display: flex;              /* Place buttons in a row */
+    gap: 10px;                  /* Space between buttons */
 }
+
+/* === COMMON BUTTON STYLES === */
+.save-btn, .delete-btn {
+    padding: 10px 20px;         /* Inner padding */
+    border: none;               /* Remove default border */
+    border-radius: 8px;         /* Rounded corners */
+    font-size: 16px;            /* Button text size */
+    cursor: pointer;            /* Pointer cursor on hover */
+}
+
+/* === SAVE BUTTON STYLE === */
+.save-btn {
+    background-color: #4e7cff;  /* Blue background */
+    color: white;               /* White text */
+}
+
+/* === DELETE BUTTON STYLE === */
+.delete-btn {
+    background-color: #e74c3c;  /* Red background */
+    color: white;               /* White text */
+}
+
+/* === TO-DO LIST STYLING === */
+.todo-list {
+    list-style: none;           /* Remove default bullet points */
+    padding: 0;                 /* No extra padding */
+}
+
+/* === EACH TASK ITEM === */
+.todo-item {
+    padding: 15px;              /* Space inside each list item */
+    border-bottom: 1px solid #eee; /* Light border between tasks */
+}
+
+/* === TASK TITLE LINK === */
+.todo-title {
+    font-weight: bold;          /* Bold title */
+    color: #333;                /* Dark gray text */
+    text-decoration: none;      /* Remove underline */
+    font-size: 18px;            /* Bigger font */
+}
+
+/* === ON HOVER TITLE === */
+.todo-title:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* === TASK CONTENT (description under title) === */
+.todo-content {
+    margin-top: 5px;            /* Space between title and content */
+    color: #666;                /* Lighter gray text for less emphasis */
+}
+

@@ -28,7 +28,7 @@ This project allows users to create, view, edit and delete tasks.
 ## Getting Started
 
 ### 1. Clone the repository
-    git clone https://github.com/abhishekgtit/django-todo-list.git
+    git clone https://github.com/abhishekgitt/django-todo-list.git
     cd django-todo-list
 
 <details>
