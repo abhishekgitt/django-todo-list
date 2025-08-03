@@ -8,7 +8,7 @@ def get_all_tasks():
     return Todo.objects.all().order_by('-created_at')
 
 
-# Home page view — handle POST & GET , used to manuplate/send to html.
+# Home page view — handle POST & GET ,  manuplate data & send data to html.
 def home(request):
     tasks = get_all_tasks()
 
@@ -34,15 +34,13 @@ def edit_task(request, task_id):
             return redirect('home_todo')
     else:
         form = TodoForm(instance=task)
-    #return these to html file 
+    #return these data to html file 
     return render(request, 'todo/home.html', {
         'form': form,
         'tasks': tasks,
         'edit': True,
         'task_id': task_id
     })
-
-
 
 
 # Delete a task by ID
